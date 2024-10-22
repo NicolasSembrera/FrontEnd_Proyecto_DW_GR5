@@ -43,7 +43,7 @@ public class LoginController {
     @PostMapping("/autenticar")
     public String autenticar(@RequestParam String codigo, @RequestParam String password, Model model) {
         if (codigo == null || codigo.trim().isEmpty() || password == null || password.trim().isEmpty()) {
-            LoginModel loginModel = new LoginModel("01", "Error: Debe completar correctamente sus credenciales");
+            LoginModel loginModel = new LoginModel("01", "Error: Debe completar correctamente sus credenciales .");
             model.addAttribute("loginModel", loginModel);
             return "inicio";
         }
